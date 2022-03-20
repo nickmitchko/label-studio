@@ -69,6 +69,7 @@ logger.info('=> Database and media directory: %s', BASE_DATA_DIR)
 DJANGO_DB_MYSQL = 'mysql'
 DJANGO_DB_SQLITE = 'sqlite'
 DJANGO_DB_POSTGRESQL = 'postgresql'
+DJANGO_DB_IRIS = 'iris'
 DJANGO_DB = 'default'
 DATABASE_NAME_DEFAULT = os.path.join(BASE_DATA_DIR, 'label_studio.sqlite3')
 DATABASE_NAME = get_env('DATABASE_NAME', DATABASE_NAME_DEFAULT)
@@ -88,6 +89,14 @@ DATABASES_ALL = {
         'NAME': get_env('MYSQL_NAME', 'labelstudio'),
         'HOST': get_env('MYSQL_HOST', 'localhost'),
         'PORT': int(get_env('MYSQL_PORT', '3306')),
+    },
+    DJANGO_DB_IRIS: {
+        'ENGINE': 'django_iris',
+        'USER': get_env('ISC_USER', '_system'),
+        'PASSWORD': get_env('ISC_PASSWORD', 'SYS'),
+        'NAME': get_env('ISC_NAMESPACE', 'USER'),
+        'HOST': get_env('ISC_HOST', 'localhost'),
+        'PORT': int(get_env('ISC_PORT', '1972')),
     },
     DJANGO_DB_SQLITE: {
         'ENGINE': 'django.db.backends.sqlite3',

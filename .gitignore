@@ -62,3 +62,8 @@ deploy/nginx/certs/*
 mydata/
 deploy/pgsql/certs/*
 !deploy/pgsql/certs/.placeholder
+
+build/
+*.egg
+test.bat
+setup.cfg

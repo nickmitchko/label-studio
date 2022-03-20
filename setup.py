@@ -44,6 +44,7 @@ setuptools.setup(
         ],
     },
     extras_require={
-        'mysql': ['mysqlclient']
+        'mysql': ['mysqlclient'],
+        'iris': ['intersystems_irispython', 'django-iris>=0.1.7']
     }
 )
