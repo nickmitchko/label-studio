@@ -1,6 +1,6 @@
 {
-  "message": "Preserve timeline visibility on expand/collapse (#528) (#545)",
-  "commit": "bdd0c5766fde6e81acbde35045bff25625f3a235",
+  "message": "Fix view all for audio and video (#552)",
+  "commit": "54d7b31dbb5539de07128ee89e51e963f5d9fd33",
   "branch": "master",
-  "date": "2022-03-24T09:30:40Z"
+  "date": "2022-04-06T12:12:59Z"
 }
